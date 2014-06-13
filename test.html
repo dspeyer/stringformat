@@ -1,0 +1,22 @@
+<html><body>
+<script src=stringformat.js></script>
+<script>
+try {
+document.write('hello $adj world<br>'.$({adj:'cruel'}));
+document.write('hello ${pref}world<br>'.$({pref:'un'}));
+document.write('you cost $$$_.$_<br>'.$(3,50));
+document.write('$0 $0 $0 $0 $0 $0 $0 $0 $1<br>'.$('na','batman'));
+document.write('the code is <tt>$<_></tt><br>'.$('<b>bold</b>'));
+document.write('1d: $<sf:1:0> $<sf:1:1> $<sf:1:2> 2d: $<sf:2:0> $<sf:2:1> $<sf:2:2> <br>'.$(12345,1.2345,0.000012345));
+document.write('formatted: $<si:0> $<si:1> $<si:2> $<si:3> $<si:4> $<si:2:0> $<si:2:1> $<si:2:2> $<si:2:3> $<si:2:4><br>'.$(7654321,4444,44,0.44,0.000023));
+document.write('huge: $0 $<si:0> $<si:2:0><br>'.$(3123123123123123123123123123123));
+document.write('tiny: $0 $<si:0> $<si:2:0><br>'.$(0.000000000000000042));
+document.write('hex: $<h:0> $<h:1> $<H:0> $<H:1><br>'.$(510, 510.05));
+document.write('error: $foo <br>'.$({'bar':3}));
+document.write('error: $_ $_ stuff <br>'.$(3));
+document.write('error: $<xxx:_> <br>'.$(3));
+String.prototype.$.throwOnError = true;
+document.write('error: $<zzz:_> <br>'.$(3));
+} catch(e){}
+</script>
+</body></html>

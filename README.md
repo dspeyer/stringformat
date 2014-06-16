@@ -101,7 +101,7 @@ To transmit 3.0GiB at 100MB/s will take 32s
 
 ### Hexadecimal
 
-To print a number in hex, use the $<h:_> or $<H:_> depending on whether you prefer upper or lower case letters for digits a-f.
+To print a number in hex, use the $&lt;h:_&gt; or $&lt;H:_&gt; depending on whether you prefer upper or lower case letters for digits a-f.
 
 ### Creating Your Own
 

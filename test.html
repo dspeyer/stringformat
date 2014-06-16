@@ -11,6 +11,7 @@ document.write('the code is <tt>$<_></tt><br>'.$('<b>bold</b>'));
 document.write('1d: $<sf:1:0> $<sf:1:1> $<sf:1:2> 2d: $<sf:2:0> $<sf:2:1> $<sf:2:2> <br>'.$(12345,1.2345,0.000012345));
 document.write('rounding: $<sf:2:_> $<sf:2:_> $<sf:2:_> $<sf:2:_><br>'.$(1.999,2.001,1.949,1.951));
 document.write('formatted: $<si:0> $<si:1> $<si:2> $<si:3> $<si:4> $<si:2:0> $<si:2:1> $<si:2:2> $<si:2:3> $<si:2:4><br>'.$(7654321,4444,44,0.44,0.000023));
+document.write('To transmit $<si:2:_>B at $<si:_>B/s will take $<si:_>s<br>'.$(3*1024*1024*1024, 100*1000*1000, 3*1024*1024*1024 / (100*1000*1000)));
 document.write('huge: $0 $<si:0> $<si:2:0><br>'.$(3123123123123123123123123123123));
 document.write('tiny: $0 $<si:0> $<si:2:0><br>'.$(0.000000000000000042));
 document.write('hex: $<h:0> $<h:1> $<H:0> $<H:1><br>'.$(510, 510.05));

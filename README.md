@@ -71,7 +71,7 @@ $<formatter:interpolationTarget>
 If you also omit formatter, an HTML escaper will be used (this inspired the choice of angle brackets).  For example:
 
 ```javascript
-"Hello, $<_>, you cannot XSS me!".$(userProvidedName)
+document.write("Hello, $<_>, you cannot XSS me!".$(userProvidedName));
 ```
 
 The library comes with several additional formatters:
@@ -80,7 +80,7 @@ The library comes with several additional formatters:
 
 The "sf" formatter supplies a given number of significant figures.  It tends to improve on javascript's natural tendency to write things like "you have 2.000000000001 dogs".  It takes a number of digits as an optional argument.  For example:
 
-|Value|$<sf:_>|$<sf:2:_>|
+|Value|$&lt;sf:_&gt;|$&lt;sf:2:_&gt;|
 |-----|-------|---------|
 |123.4|123|123|
 |12.34|12|12|

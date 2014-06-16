@@ -25,6 +25,15 @@ The basic use case looks like this:
 
 Animal and noise are inserted to replace the $_ characters.  This lets you write natural-looking text and interpolate variables in a compact way.
 
+The $ character is used for both the interpolation targets and as the function for several reasons:
+
+* $ interpolation is familiar to bash and perl programmers
+* $ is punctuation-like enough to feel like an operator, but javascript lets us define it
+* A single character lets the library stay visually out of the way of the programs content
+* Using the same character for both is more memorable
+
+Note that this has nothing to do with jquery, and the two should combine fine (though if you use interpolation inside a jquery selector, you may have readability issues).
+
 ## Names, Numbers and Underscores
 
 There are three different ways to refer to a variable to be interpolated.  It is generally wise not to mix them:

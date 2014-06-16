@@ -97,7 +97,9 @@ String.prototype.$.formatters = {
 	var digits = Math.ceil(Math.log(num)/Math.log(10))
 	if (digits >= d) {
 	    return Math.round(num);
-	} else if (digits > 1) {
+	}
+	num += 5 * Math.pow(10, digits-d-1); // Since we're truncating, not rounding, catch round-ups
+	if (digits > 1) {
 	    return num.toString().substr(0,d);
 	} else if (digits == 1) {
 	    return num.toString().substr(0,d+1);

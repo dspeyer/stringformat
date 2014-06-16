@@ -94,7 +94,7 @@ String.prototype.$.formatters = {
 	if (typeof(d) == 'string') {
 	    d=parseInt(d);
 	}
-	var digits = Math.ceil(Math.log(num)/Math.log(10))
+	var digits = Math.floor(Math.log(num)/Math.log(10))+1;
 	if (digits >= d) {
 	    return Math.round(num);
 	}
